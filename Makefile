@@ -4,5 +4,5 @@ install:
 start:
 	npm run babel-node -- src/bin/brain-games.js
 
-link:
-	npm run eslint
+lint:
+	npm run eslint ".js" "src/"
