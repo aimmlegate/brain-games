@@ -1,6 +1,6 @@
 {
   "name": "aimml-brain-games",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "just games",
   "main": "index.js",
   "scripts": {
