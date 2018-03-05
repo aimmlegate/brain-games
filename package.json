@@ -24,7 +24,8 @@
   ],
   "homepage": "https://github.com/aimmlegate/project-lvl1-s232#readme",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js"
   },
   "devDependencies": {
     "babel-cli": "*",
