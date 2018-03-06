@@ -6,6 +6,8 @@ const calc = (n, m, oper) => {
     default: return null;
   }
 };
+// @flow
+
 const operator = (oper) => {
   switch (oper) {
     case 0: return '+';
