@@ -1,6 +1,6 @@
 {
   "name": "aimml-brain-games",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "just games",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,8 @@
   "homepage": "https://github.com/aimmlegate/project-lvl1-s232#readme",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc.js"
   },
   "devDependencies": {
     "babel-cli": "*",
