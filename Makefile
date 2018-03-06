@@ -6,3 +6,6 @@ start:
 
 lint:
 	npm run eslint ".js" "src/"
+
+flow:
+	flow
