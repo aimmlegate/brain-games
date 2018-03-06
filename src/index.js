@@ -3,8 +3,9 @@ import readlineSync from 'readline-sync';
 const getAnswer = message => readlineSync.question(message);
 
 export default (game) => {
-  const userName = getAnswer('May I have your name? ');
+  console.log('Welcome to the Brain Games!');
   console.log(game()('startMessage'));
+  const userName = getAnswer('May I have your name? ');
   const gameplay = (isRight = 1) => {
     if (isRight > 3) {
       console.log(`Congratulations, ${userName}`);
