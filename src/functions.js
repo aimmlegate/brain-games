@@ -1,7 +1,3 @@
-import readlineSync from 'readline-sync';
-
-export const getAnswer = message => readlineSync.question(message);
-
 export const randPos = (max, min) => Math.floor(Math.random() * (max - min)) + min;
 
 export const operatorString = (oper) => {
