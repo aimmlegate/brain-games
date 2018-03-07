@@ -1,4 +1,5 @@
 // @flow
+
 import gameEngine from '..';
 
 const calc = (n, m, oper) => {

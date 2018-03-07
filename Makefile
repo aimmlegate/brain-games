@@ -9,3 +9,9 @@ lint:
 
 flow:
 	flow
+
+publish:
+	npm run publish
+
+build:
+	npm run build

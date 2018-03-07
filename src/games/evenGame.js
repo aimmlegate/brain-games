@@ -1,4 +1,5 @@
 // @flow
+
 import gameEngine from '..';
 
 const gameLogic = () => {
@@ -9,7 +10,7 @@ const gameLogic = () => {
     switch (key) {
       case 'startMessage': return startMessage;
       case 'question': return question;
-      case 'rightAnswer': return rightAnswer;
+      case 'rightAnswer': return rightAnswer.toString();
       default: return null;
     }
   };
