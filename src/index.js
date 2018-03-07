@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
 
+
 const getAnswer = message => readlineSync.question(message);
 
 export default (game) => {

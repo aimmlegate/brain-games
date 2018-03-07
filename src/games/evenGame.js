@@ -1,6 +1,7 @@
 // @flow
+import gameEngine from '..';
 
-export default () => {
+const gameLogic = () => {
   const startMessage = 'Answer "yes" if number even otherwise answer "no".';
   const question = Math.floor(Math.random() * (100 - 1)) + 1;
   const rightAnswer = (question % 2 === 0) ? 'yes' : 'no';
@@ -14,3 +15,4 @@ export default () => {
   };
 };
 
+export default () => gameEngine(gameLogic);
