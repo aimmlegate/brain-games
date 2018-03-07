@@ -1,4 +1,5 @@
-#!/usr/bin/env node
+// @flow
+
 import gameEngine from '..';
 
 const euclid = (n, m) => {
