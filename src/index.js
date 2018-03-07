@@ -1,12 +1,10 @@
-import readlineSync from 'readline-sync';
 
-
-const getAnswer = message => readlineSync.question(message);
+import * as fun from './functions';
 
 export default (game) => {
   console.log('Welcome to the Brain Games!');
   console.log(game()('startMessage'));
-  const userName = getAnswer('May I have your name? ');
+  const userName = fun.getAnswer('May I have your name? ');
   const gameplay = (isRight = 1) => {
     if (isRight > 3) {
       console.log(`Congratulations, ${userName}`);
@@ -14,7 +12,7 @@ export default (game) => {
     }
     const newGame = game();
     console.log(`Question: ${newGame('question')}`);
-    const newAnswer = getAnswer('Your answer: ');
+    const newAnswer = fun.getAnswer('Your answer: ');
     if (newAnswer === newGame('rightAnswer')) {
       console.log('Correct!');
       return gameplay(isRight + 1);
