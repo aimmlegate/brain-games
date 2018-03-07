@@ -1,4 +1,4 @@
-export const randPos = (max, min) => Math.floor(Math.random() * (max - min)) + min;
+export const getRandomNatural = (max, min) => Math.floor(Math.random() * (max - min)) + min;
 
 export const operatorString = (oper) => {
   switch (oper) {
@@ -9,7 +9,7 @@ export const operatorString = (oper) => {
   }
 };
 
-export const calculator = (n, m, oper) => {
+export const calculate = (n, m, oper) => {
   switch (oper) {
     case 0: return n + m;
     case 1: return n - m;
@@ -18,7 +18,7 @@ export const calculator = (n, m, oper) => {
   }
 };
 
-export const euclid = (n, m) => {
+export const getGcd = (n, m) => {
   if (n === m) return n;
-  return (n < m) ? euclid(n, m - n) : euclid(m, n - m);
+  return (n < m) ? getGcd(n, m - n) : getGcd(m, n - m);
 };

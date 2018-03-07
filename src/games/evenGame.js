@@ -1,11 +1,11 @@
 // @flow
 
 import gameEngine from '..';
-import * as fun from '../functions';
+import * as fun from '../helpers';
 
 const gameLogic = () => {
   const startMessage = 'Answer "yes" if number even otherwise answer "no".';
-  const question = fun.randPos(1, 100);
+  const question = fun.getRandomNatural(1, 100);
   const rightAnswer = (question % 2 === 0) ? 'yes' : 'no';
   return (key:string) => {
     switch (key) {
