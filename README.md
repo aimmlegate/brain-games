@@ -5,4 +5,37 @@
 
 [![Build Status](https://travis-ci.org/aimmlegate/project-lvl1-s232.svg?branch=master)](https://travis-ci.org/aimmlegate/project-lvl1-s232)
 
+```
 npm install -g aimml-brain-games
+```
+
+Игры
+
+1. Сбалансировать число
+```
+brain-balance
+```
+
+2. Калькулятор
+```
+brain-calc
+```
+3. Определить четность
+```
+brain-even
+
+```
+4. Наименьший общий делитель
+```
+brain-gcd
+```
+
+5. Простое число
+```
+brain-prime
+```
+
+6. Недостающий член прогрессии
+```
+brain-progression
+```
