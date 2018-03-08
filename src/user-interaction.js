@@ -1,5 +1,7 @@
+// @flow
+
 import readlineSync from 'readline-sync';
 
-export const getAnswer = message => readlineSync.question(message);
+export const getAnswer = (message: string) => readlineSync.question(message);
 
-export const showMessage = message => console.log(message);
+export const showMessage = (message: string) => console.log(message);

@@ -1,6 +1,8 @@
+// @flow
+
 import * as ui from './user-interaction';
 
-export default (game) => {
+export default (game: Function) => {
   ui.showMessage('Welcome to the Brain Games!');
   ui.showMessage(game()('startMessage'));
   const userName = ui.getAnswer('May I have your name? ');
