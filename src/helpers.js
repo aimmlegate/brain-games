@@ -1,6 +1,9 @@
-export const getRandomNatural = (max, min) => Math.floor(Math.random() * (max - min)) + min;
+// @flow
 
-export const operatorString = (oper) => {
+export const getRandomNatural =
+  (max: number, min: number) => Math.floor(Math.random() * (max - min)) + min;
+
+export const operatorString = (oper: number) => {
   switch (oper) {
     case 0: return '+';
     case 1: return '-';
@@ -9,7 +12,7 @@ export const operatorString = (oper) => {
   }
 };
 
-export const calculate = (n, m, oper) => {
+export const calculate = (n: number, m: number, oper: number) => {
   switch (oper) {
     case 0: return n + m;
     case 1: return n - m;
@@ -18,18 +21,19 @@ export const calculate = (n, m, oper) => {
   }
 };
 
-export const getGcd = (n, m) => {
+export const getGcd = (n: number, m: number) => {
   if (n === m) return n;
   return (n < m) ? getGcd(n, m - n) : getGcd(m, n - m);
 };
 
-export const isEqualArrays = (ar1, ar2) => ar1.every((el, index) => el === ar2[index]);
+export const isEqualArrays =
+  (ar1: Array<number>, ar2: Array<number>) => (ar1.every((el, index) => el === ar2[index]));
 
-export const stringToNumArray = string => string.split('').map(el => parseInt(el, 10));
+export const stringToNumArray = (string: string) => string.split('').map(el => parseInt(el, 10));
 
-export const numArrayToString = array => array.join('');
+export const numArrayToString = (array: Array<number>) => array.join('');
 
-export const balanceArray = (array) => {
+export const balanceArray = (array: Array<number>) => {
   const mutArray = array.slice();
   if ((mutArray[0] === mutArray[mutArray.length - 1]) ||
     (Math.abs(mutArray[0] - mutArray[mutArray.length - 1]) === 1)) {
@@ -45,9 +49,9 @@ export const balanceArray = (array) => {
   return balanceArray(mutArray.sort((a, b) => a - b));
 };
 
-export const createProgression = (start, d) => n => start + ((n - 1) * d);
+export const createProgression = (start: number, d: number) => (n: number) => start + ((n - 1) * d);
 
-export const printProgression = (progress, hide, length) => {
+export const printProgression = (progress: Function, hide: number, length: number) => {
   const iter = (len, string) => {
     if (len <= 0) return string;
     if (len === hide) return iter(len - 1, `.. ${string}`);
@@ -56,7 +60,7 @@ export const printProgression = (progress, hide, length) => {
   return iter(length, '');
 };
 
-export const isPrime = (number) => {
+export const isPrime = (number: number) => {
   if (number < 2) return false;
   const iter = (divisor) => {
     if (divisor === number) return true;
