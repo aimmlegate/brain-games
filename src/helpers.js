@@ -46,3 +46,15 @@ export const normalize = (array) => {
     return el + 1;
   });
 };
+
+export const createProgression = (start, d) => n => start + ((n - 1) * d);
+
+export const printProgression = (progress, hide, length) => {
+  const iter = (len, string) => {
+    if (len <= 0) return string;
+    if (len === hide) return iter(len - 1, `.. ${string}`);
+    return iter(len - 1, `${progress(len)} ${string}`);
+  };
+  return iter(length, '');
+};
+
