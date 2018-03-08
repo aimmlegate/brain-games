@@ -29,22 +29,20 @@ export const stringToNumArray = string => string.split('').map(el => parseInt(el
 
 export const numArrayToString = array => array.join('');
 
-export const normalize = (array) => {
-  const arrayCopy = array.slice();
-  return arrayCopy.map((el, indx, arr) => {
-    const mutArray = arr;
-    if ((el === arr[indx + 1]) ||
-        (Math.abs(el - arr[indx + 1]) === 1) ||
-        (indx === (arr.length - 1))) {
-      return el;
-    }
-    if (el > arr[indx + 1]) {
-      mutArray[indx + 1] = arr[indx + 1] + 1;
-      return el - 1;
-    }
-    mutArray[indx + 1] = arr[indx + 1] - 1;
-    return el + 1;
-  });
+export const balanceArray = (array) => {
+  const mutArray = array.slice();
+  if ((mutArray[0] === mutArray[mutArray.length - 1]) ||
+    (Math.abs(mutArray[0] - mutArray[mutArray.length - 1]) === 1)) {
+    return mutArray;
+  }
+  if (mutArray[0] > mutArray[mutArray.length - 1]) {
+    mutArray[0] -= 1;
+    mutArray[mutArray.length - 1] += 1;
+    return balanceArray(mutArray.sort((a, b) => a - b));
+  }
+  mutArray[0] += 1;
+  mutArray[mutArray.length - 1] -= 1;
+  return balanceArray(mutArray.sort((a, b) => a - b));
 };
 
 export const createProgression = (start, d) => n => start + ((n - 1) * d);
