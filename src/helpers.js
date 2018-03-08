@@ -58,10 +58,10 @@ export const printProgression = (progress, hide, length) => {
 
 export const isPrime = (number) => {
   if (number < 2) return false;
-  const iter = (devisor) => {
-    if (devisor === number) return true;
-    if (number % devisor === 0) return false;
-    return iter(devisor + 1);
+  const iter = (divisor) => {
+    if (divisor === number) return true;
+    if (number % divisor === 0) return false;
+    return iter(divisor + 1);
   };
   return iter(2);
 };
