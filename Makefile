@@ -23,7 +23,7 @@ flow:
 	flow
 
 publish:
-	npm run publish
+	npm publish
 
 build:
 	npm run build
