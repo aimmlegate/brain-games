@@ -21,7 +21,7 @@ export default (game: Function) => {
       return null;
     }
     ui.showMessage(`Let's try again, ${userName}`);
-    return gameplay(isRight);
+    return null;
   };
   return gameplay();
 };

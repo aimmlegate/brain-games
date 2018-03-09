@@ -8,8 +8,8 @@ const gameLogic = () => {
   const num1 = fun.getRandomNatural(50, 1);
   const num2 = fun.getRandomNatural(50, 1);
   const operTemplate = fun.getRandomNatural(3, 0);
-  const question = `${num1} ${fun.operatorString(operTemplate)} ${num2}`;
-  const rightAnswer = fun.calculate(num1, num2, operTemplate);
+  const question = `${num1} ${fun.getOperatorString(operTemplate)} ${num2}`;
+  const rightAnswer = fun.calculateNumbers(num1, num2, operTemplate);
   return (key:string) => {
     switch (key) {
       case 'startMessage': return startMessage;

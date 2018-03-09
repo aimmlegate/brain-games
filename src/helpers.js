@@ -3,7 +3,7 @@
 export const getRandomNatural =
   (max: number, min: number) => Math.floor(Math.random() * (max - min)) + min;
 
-export const operatorString = (oper: number) => {
+export const getOperatorString = (oper: number) => {
   switch (oper) {
     case 0: return '+';
     case 1: return '-';
@@ -12,7 +12,7 @@ export const operatorString = (oper: number) => {
   }
 };
 
-export const calculate = (n: number, m: number, oper: number) => {
+export const calculateNumbers = (n: number, m: number, oper: number) => {
   switch (oper) {
     case 0: return n + m;
     case 1: return n - m;
