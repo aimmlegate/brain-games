@@ -3,7 +3,7 @@
 import gameEngine from '..';
 import * as fun from '../helpers';
 
-const gameLogic = () => {
+const gameLogic = (): Function => {
   const startMessage = 'Find the greatest common divisor of given numbers.';
   const num1 = fun.getRandomNatural(50, 1);
   const num2 = fun.getRandomNatural(50, 1);

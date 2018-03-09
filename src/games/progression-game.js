@@ -3,7 +3,7 @@
 import gameEngine from '..';
 import * as fun from '../helpers';
 
-const gameLogic = () => {
+const gameLogic = (): Function => {
   const startMessage = 'What number is missing in this progression?';
 
   const newProgression = fun.createProgression(

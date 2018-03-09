@@ -3,7 +3,7 @@
 import gameEngine from '..';
 import * as fun from '../helpers';
 
-const gameLogic = () => {
+const gameLogic = (): Function => {
   const startMessage = 'Balance the given number.';
   const givenNumber = fun.getRandomNatural(100, 9999);
   const question = `${givenNumber}`;

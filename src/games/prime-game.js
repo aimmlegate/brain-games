@@ -3,7 +3,7 @@
 import gameEngine from '..';
 import * as fun from '../helpers';
 
-const gameLogic = () => {
+const gameLogic = (): Function => {
   const startMessage = 'Is this number prime?';
   const number = fun.getRandomNatural(1, 100);
   const question = `${number}`;
